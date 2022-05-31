@@ -7,6 +7,11 @@ const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => ctx.reply('Add me to a group to remove inline keyboards, I will leave after that'))
 bot.help((ctx) => ctx.reply('Add me to a group to remove inline keyboards, I will leave after that'))
 
+bot.hears('hi', (ctx) => {
+	console.log('received hi')
+	ctx.reply('Hey there')
+});
+
 // when new chat members are added (including myself)
 bot.on("new_chat_members", (ctx) => {
 
