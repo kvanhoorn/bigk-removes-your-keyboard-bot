@@ -10,8 +10,7 @@
   },
   "scripts": {
     "devstart": "nodemon index.js",
-    "start": "pm2 start index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "pm2 start index.js"
   },
   "author": "",
   "license": "GPL-3.0-only",
