@@ -1,9 +1,8 @@
 const { Telegraf } = require('telegraf')
-const fs = require('fs')
+require('dotenv').config()
 
-// read from file called 'telegram-token'
-const token = fs.readFileSync('telegram-token', 'utf8').trim();
-const bot = new Telegraf(token)
+// start bot with token from env
+const bot = new Telegraf(process.env.BOT_TOKEN)
 
 bot.start((ctx) => ctx.reply('Add me to a group to remove inline keyboards, I will leave after that'))
 bot.help((ctx) => ctx.reply('Add me to a group to remove inline keyboards, I will leave after that'))
